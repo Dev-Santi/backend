@@ -1,0 +1,63 @@
+<main class="center">
+    <h1>Administrador de productos</h1>
+    <div style="display: flex; gap:2rem">
+        <section style="background-color: rgba(0, 254, 8, 0.19);" class="borders">
+            <h2>Agregar un producto</h2>
+            <form id="addProduct">
+                <label>Título</label>
+                <input name="title" required>
+                <br>
+                <label>Código</label>
+                <input name="code" required>
+                <br>
+                <label>Precio</label>
+                <input name="price" type="number" required>
+                <br>
+                <label>Stock</label>
+                <input name="stock" type="number" required>
+                <br>
+                <label>Categoría</label>
+                <input name="category" required>
+                <br>
+                <label>Imágenes</label>
+                <input name="thumbnails" type="text">
+                <br>
+                <label>Descripción</label>
+                <textarea name="description" cols="30" rows="10" required></textarea>
+                <input style="margin-bottom: 1rem" class="submitBtn" type="submit">
+            </form>
+        </section>
+        <section style="background-color: rgba(0, 8, 254, 0.19);" class="borders">
+            <h2>Modificar un producto</h2>
+            <form id="updateProduct">
+                <label>ID del producto</label>
+                <input name="id" required>
+                <br>
+                <label>Campo a modificar</label>
+                <select name="fields" id="fields" required>
+                    <option value="title">Titulo</option>
+                    <option value="description">Descripcion</option>
+                    <option value="code">Codigo</option>
+                    <option value="price">Precio</option>
+                    <option value="stock">Stock</option>
+                    <option value="category">Categoría</option>
+                    <option value="thumbnails">Thumbnails</option>
+                </select>
+                <br>
+                <textarea name="change" id="change" cols="30" rows="10" required></textarea>
+                <br>
+                <input style="margin-bottom: 1rem" class="submitBtn" type="submit">
+            </form>
+        </section>
+        <section style="background-color: rgba(254, 0, 0, 0.19);" class="borders">
+            <h2>Eliminar un producto</h2>
+            <form id="deleteProduct">
+                <label>ID del producto</label>
+                <input name="id" required>
+                <br>
+                <input style="margin-bottom: 1rem" class="submitBtn" type="submit">
+            </form>
+        </section>
+    </div>
+</main>
+<script src="/js/productManager.js"></script>

@@ -1,0 +1,12 @@
+<main>
+    <h1>Bienvenido al chat {{name}}</h1>
+    {{#if access}}
+    <label for="input">Escribe un mensaje:</label>
+    <input style="min-width: 20rem" type="text" name="input" id="input">
+    {{/if}}
+    <div class="{{name}}-{{rol}}" style=" display:flex;flex-direction:column;gap:1.2rem;border: 1px solid black; padding: 3rem; margin:2rem 2rem 2rem 0" id="chatBox">
+        <p id="messageLogs"></p>
+    </div>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>

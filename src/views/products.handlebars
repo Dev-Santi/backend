@@ -1,0 +1,39 @@
+<main class="center">
+  {{!-- <button class="logout" type="button">Logout</button> --}}
+  <section class="center">
+    <h2>Bienvenido <span class="cartContainer {{userCart}}" style="color: rgb(52, 165, 52)">{{userName}}</span></h2>
+  </section>
+  <div>-------------------------------------------------------</div>
+  <section >
+    <div class="wide-container">
+      <h2 style="margin-right: 4rem">Page: <span style="color: rgb(52, 165, 52)">{{page}}</span> / <span style="color: rgb(52, 165, 52)" >{{totalPages}}</span></h2>
+    </div>
+    <div class="wide-container">
+      {{#if hasPrevPage}}
+      <a href={{prevLink}}><-- Prev Page </a> 
+      {{/if}}
+      {{#if hasNextPage}}
+      <a href={{nextLink}}>Next Page --></a>
+      {{/if}}
+    </div>
+  </section>
+  <h1>Productos:</h1>
+  <ol>
+    {{#each payload}}
+      <li>
+        <ul class="card">
+          <img src={{this.thumbnails.[0]}} alt="" />
+          <li class="title">Title: <span>{{this.title}}</span></li>
+          <li>Category: <span>{{this.category}}</span></li>
+          <li class="description">Description
+            <span>{{this.description}}</span></li>
+          <li>Price: <span>${{this.price}}</span></li>
+          {{#if ../userRol}}
+            <button class='addToCart {{this.id}}' type="submit">Agregar al carrito</button>
+          {{/if}}
+        </ul>
+      </li>
+    {{/each}}
+  </ol>
+</main>
+<script src="/js/products.js"></script>

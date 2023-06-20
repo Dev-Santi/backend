@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #535353;
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    margin: 2rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+form input {
+    outline: 0.1rem solid #438643;
+    min-width: 15rem;
+    border-radius: 0.2rem;
+    border: none;
+    transition: 0.1s linear;
+}
+
+form input:focus {
+    outline: 0.2rem solid #438643;
+}
+
+form button {
+    width: 7.5rem;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #cacaca;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #d8e7d6;
+}
+
+.submitBtn:active,
+.submitBtn:focus {
+    background-color: #bbecb5;
+}
+
+/* card */
+
+.card {
+    width: 20rem;
+    height: 35rem;
+    background-color: #6ca786;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgb(72, 197, 0);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card li {
+    margin: 0.5rem;
+    color: black;
+    font-weight: 600;
+}
+
+.card li span {
+    color: white;
+    font-weight: 400;
+}
+
+.description {
+    height: 4rem;
+    overflow-y: auto;
+}
+
+.card button {
+    display: block;
+    background-color: rgb(15, 98, 27);
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    width: fit-content;
+    transition: 0.3s;
+    margin: 0 auto;
+    text-transform: uppercase;
+    border: none;
+}
+
+.card button:hover {
+    background-color: rgb(65, 145, 77);
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    background-color: rgb(42, 130, 34);
+    color: white;
+    padding: 1rem;
+    margin: 2rem;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #6bb16b;
+}
+
+a:active {
+    background-color: #c5e2c5;
+}
+
+h2>span {
+    color: #438643;
+}
+
+.logout {
+    display: block;
+    text-decoration: none;
+    background-color: rgb(182, 58, 30);
+    color: white;
+    padding: 1rem;
+    margin: 2rem;
+    width: fit-content;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: rgb(202, 79, 52);
+}
+
+.logout:active {
+    background-color: rgb(222, 132, 112);
+}
+
+.center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wide-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.borders {
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
